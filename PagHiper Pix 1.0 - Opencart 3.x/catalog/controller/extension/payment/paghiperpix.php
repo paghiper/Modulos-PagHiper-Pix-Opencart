@@ -281,7 +281,8 @@ class ControllerExtensionPaymentPagHiperPix extends Controller {
 //class extra 
 class ValidaCPFCNPJPagHiperPix
 {
-
+	private $valor;
+	
 	function __construct ( $valor = null ) {
 		$this->valor = preg_replace( '/[^0-9]/', '', $valor );
 		$this->valor = (string)$this->valor;
